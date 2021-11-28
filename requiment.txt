@@ -1,0 +1,118 @@
+https://justpaste.it/23cu5
+Đăng nhập, đăng xuất 
+
+- Đăng nhập quyền quản trị, nhân viên (theo chi nhánh)
+
+Quản lí tài khoản
+
+- Thêm
+
+- Sửa
+
+- Khóa
+
+- Xem danh sách
+
+Quản lí nhân viên
+
+- Thêm
+
+- Sửa
+
+- Khóa
+
+- Xem danh sách
+
+Quản lí khách hàng
+
+- Thêm
+
+- Sửa
+
+- Xem danh sách (thể hiện số lần mua)
+
+Quản lí chi nhánh
+
+- Thêm
+
+- Sửa
+
+- Xem danh sách
+
+Quản lí nhóm thuốc
+
+- Thêm
+
+- Sửa
+
+- Xem danh sách
+
+- Xem chi tiết
+
+Quản lí thuốc
+
+- Thêm
+
+- Sửa
+
+- Xem danh sách
+
+- Xem chi tiết
+
+- Thêm bảng giá thuốc
+
+- Sửa bảng giá thuốc
+
+- Xem tồn kho thuốc theo đơn vị
+
+- Chỉnh sửa số lượng tồn kho
+
+- Quy đổi đơn vị thuốc
+
+Quản lí đơn vị thuốc
+
+- Thêm
+
+- Sửa
+
+- Xem danh sách
+
+Quản lí toa thuốc gợi ý
+
+- Thêm
+
+- Sửa
+
+- Xem danh sách
+
+- Xem chi tiết
+
+Quản lí hóa đơn mua
+
+- Thêm (tăng số lượng tồn kho)
+
+- Xem danh sách
+
+- Xem chi tiết
+
+ 
+
+Quản lí hóa đơn bán
+
+- Thêm (giảm số lượng tồn kho)
+
+- Xem danh sách
+
+- Xem chi tiết
+
+- Tìm kiếm toa thuốc gợi ý
+
+- Thêm toa thuốc gợi ý vào hóa đơn
+
+Báo cáo doanh thu
+
+- Thống kê doanh số bán theo thuốc
+
+- Thống kê doanh số bán theo chi nhánh
+
+- Biểu đồ doanh số theo chi nhánh
