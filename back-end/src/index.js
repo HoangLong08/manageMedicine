@@ -4,7 +4,7 @@ const path = require('path');
 const cors = require("cors");
 const multer = require('multer');
 const app = express();
-const port = 3000;
+const port = 5005;
 const route = require('./routes/index');
 const errorMiddleware = require('./app/middleware/error.middleware');
 

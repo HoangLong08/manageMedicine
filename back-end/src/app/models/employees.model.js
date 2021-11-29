@@ -54,6 +54,13 @@ class EmployeesModel {
          updated_at=CURRENT_TIMESTAMP() WHERE ${this.tableAccount}.id = ${id}`;
         return await query(sql);
     }
+
+
+    // GET LIST EMPLOYEES 
+    // ListEmployees = async () =>{
+    //     let sql = 
+    // }
+
 }
 
 module.exports = new EmployeesModel;
