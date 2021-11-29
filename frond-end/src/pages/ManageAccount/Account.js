@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Table } from 'antd';
 import "./Account.css";
 
 
@@ -21,10 +21,17 @@ const columns = [
 	},
 ];
 
+const data = [
+
+]
+
 function Account() {
 	return (
 		<div className="wrapper-content">
 			<h1 className="title-page">Quản lý tài khoản</h1>
+			<div className="wrapper-table">
+				<Table columns={columns} dataSource={data} />
+			</div>
 		</div>
 	)
 }
