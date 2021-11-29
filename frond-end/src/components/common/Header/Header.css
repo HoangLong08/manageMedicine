@@ -1,0 +1,44 @@
+.wrapper-header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 72px;
+	box-shadow: 0px 2px 5px rgba(53, 63, 79, 0.1),
+    0px 3px 5px rgba(53, 63, 79, 0.15);
+	padding: 0 24px;
+}
+
+.header-left{
+	display: flex;
+	align-items: center;
+	width: 400px;
+}
+
+.header-right{
+	width: calc(100% - 400px);
+}
+
+.image-logo{
+	display: inline-block;
+	width: auto;
+	height: 45px;
+	object-fit: cover;
+}
+
+.wrapper-avatar{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.wrapper-avatar .avatar{
+	height: 36px;
+	height: 36px;
+	border-radius: 50%;
+	margin-right: 6px;
+	object-fit: cover;
+}
+
+.name-avatar{
+	font-size: 12px;
+}
