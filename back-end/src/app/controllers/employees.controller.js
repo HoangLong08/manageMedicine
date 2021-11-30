@@ -2,10 +2,8 @@ const EmployeesModel = require('../models/employees.model');
 const HttpResponse = require('../../util/HttpResponse.util');
 const { validationResult, check } = require('express-validator');
 const TokenVerify = require('../middleware/tokenVerify')
-const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const dotenv = require('dotenv');
-const { UpdateAccount } = require('../models/employees.model');
 dotenv.config();
 const secretKey = "_P_L_eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9_29_11_2021";
         
