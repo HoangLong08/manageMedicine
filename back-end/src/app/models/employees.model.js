@@ -6,9 +6,14 @@ class EmployeesModel {
     tableAccount = 'accounts';
 
     // LOGIN
-    login = async ({username, password}) => {
+    login = async ({username, password, id_branch}) => {
         const _password = md5(password+"GNOLUHP_29112021");
-        let sql = `SELECT * FROM ${this.tableAccount} WHERE user_name = '${username}' AND password = '${_password}' AND account_status = 'activity'`;
+        let sql = `SELECT * FROM ${this.tableAccount} 
+        INNER JOIN employees ON accounts.id_employee = employees.employees_id 
+        WHERE accounts.user_name = '${username}'
+         AND accounts.password = '${_password}' 
+         AND employees.id_branch = ${id_branch}
+         AND accounts.account_status = 'activity'`;
         return await query(sql);
     }
 
