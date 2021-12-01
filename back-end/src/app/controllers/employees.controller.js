@@ -16,10 +16,10 @@ class EmployeesController {
     Login = async (req, res) => {
         this.checkValidation(req);
 
-        const { username, password } = req.body;
-        const employees = await EmployeesModel.login({ username, password });
+        const { username, password, id_branch } = req.body;
+        const employees = await EmployeesModel.login({ username, password, id_branch});
         if (!employees || employees.length ==0) {
-           return res.status(400).send(new HttpResponse("Error", "Email or password incorrect", null));
+           return res.status(400).send(new HttpResponse("Error", "Login Failed", null));
         }
         const token = jwt.sign({ employees_id: employees[0].id_employee.toString(), employees_username:employees[0].user_name.toString() }, secretKey, {
             expiresIn: '24h'
