@@ -30,3 +30,18 @@
 	margin: 0 auto;
 }
 
+.list-error{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #ffa2a2;
+	padding: 8px 12px;
+	border-radius: 4px;
+	color: red;
+	margin-bottom: 12px;
+}
+
+.list-error button{
+	background-color: transparent;
+}
+

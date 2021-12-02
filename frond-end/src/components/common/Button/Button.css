@@ -1,0 +1,11 @@
+.wrapper-btn{
+	color: #ffffff;
+  border-radius: 18px;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 0px 24px;
+  text-transform: none;
+  height: 36px;
+  cursor: pointer;
+  border: 1.5px solid rgb(95, 95, 255);
+}

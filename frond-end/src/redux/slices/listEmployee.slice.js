@@ -1,8 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
-import getListAccount from "../api/account.api";
+import getListEmployee from "../api/listEmployee.api";
 
-const listAccountSlice = createSlice({
-	name: "account",
+const listEmployeeSlice = createSlice({
+	name: "employee",
 	initialState: {
 		data: [],
 		load: false,
@@ -11,19 +11,19 @@ const listAccountSlice = createSlice({
 	reducers: {},
 
 	extraReducers: {
-		[getListAccount.pending]: (state) => {
+		[getListEmployee.pending]: (state) => {
 			state.load = true;
 		},
-		[getListAccount.fulfilled]: (state, action) => {
+		[getListEmployee.fulfilled]: (state, action) => {
 			state.load = false;
 			state.data = action.payload.data;
 			state.error = "";
 		},
-		[getListAccount.rejected]: (state, action) => {
+		[getListEmployee.rejected]: (state, action) => {
 			state.load = false;
 			state.error = action.payload.error;
 		},
 	},
 });
 
-export default listAccountSlice.reducer;
+export default listEmployeeSlice.reducer;
