@@ -42,6 +42,7 @@ function Sidebar({ content }) {
 					<li className="item-menu">
 						<NavLink to="/quan-ly-hoa-don-ban" className={(navData) => navData.isActive ? "active-link" : ""}>Quản lý hóa đơn bán</NavLink>
 					</li>
+
 				</ul>
 				<div className="content-sidebar">
 					{content}

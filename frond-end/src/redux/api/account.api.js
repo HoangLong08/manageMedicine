@@ -1,25 +1,22 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from 'axios';
-import { URL, URL_API } from "../../config";
-const loginApi = createAsyncThunk(
-	"login/postLogin",
+import { URL, URL_API } from "config";
+import authHeaderAdmin from "services/authHeader";
+const getListAccount = createAsyncThunk(
+	"branch/getListAccount",
 	async (params, thunkAPI) => {
 		try {
-			console.log("params: ", params);
 			const result = await axios({
-				method: 'POST',
-				url: URL + URL_API.API_LOGIN,
-				data: {
-					username: params.username,
-					password: params.password,
-				}
+				method: 'GET',
+				url: URL + URL_API.API_LIST_ACCOUNT,
+				headers: authHeaderAdmin(),
 			});
-			console.log("result: ", result);
+			await console.log("result: ", result);
 			return result.data;
 		} catch (error) {
-			thunkAPI.rejectWithValue({ error: error.message });
+			return thunkAPI.rejectWithValue({ error: error.message });
 		}
 	}
 );
 
-export default loginApi;
+export default getListAccount;

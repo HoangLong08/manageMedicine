@@ -13,10 +13,16 @@ a{
   text-decoration: none;
 }
 
+p, h1, h2, h3, h4, h5, h6{
+  margin: 0;
+  padding: 0;
+}
+
 button{
   border: none;
   outline: none;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 ul{
@@ -84,4 +90,38 @@ ul{
 	line-height: 32px;
 	letter-spacing: 0.01em;
 	color: #000000;
+}
+
+.content-top{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.list-action{
+  display: flex;
+  width: 80px;
+}
+
+.list-action button{
+  margin-left: 6px;
+  color: white;
+  font-size: 12px;
+}
+
+.btn-edit{
+  width: 24px;
+  height: 24px;
+  background-color: #6262ff;
+  
+}
+
+.btn-lock{
+  width: 24px;
+  height: 24px;
+  background-color: red;
+}
+
+.action-page button{
+  margin-right: 12px;
 }

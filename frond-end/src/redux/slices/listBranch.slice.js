@@ -1,8 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
-import getListAccount from "../api/account.api";
+import getListBranch from "../api/listBranch.api";
 
-const listAccountSlice = createSlice({
-	name: "account",
+const listBranchSlice = createSlice({
+	name: "branch",
 	initialState: {
 		data: [],
 		load: false,
@@ -11,19 +11,19 @@ const listAccountSlice = createSlice({
 	reducers: {},
 
 	extraReducers: {
-		[getListAccount.pending]: (state) => {
+		[getListBranch.pending]: (state) => {
 			state.load = true;
 		},
-		[getListAccount.fulfilled]: (state, action) => {
+		[getListBranch.fulfilled]: (state, action) => {
 			state.load = false;
 			state.data = action.payload.data;
 			state.error = "";
 		},
-		[getListAccount.rejected]: (state, action) => {
+		[getListBranch.rejected]: (state, action) => {
 			state.load = false;
 			state.error = action.payload.error;
 		},
 	},
 });
 
-export default listAccountSlice.reducer;
+export default listBranchSlice.reducer;
