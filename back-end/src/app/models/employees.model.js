@@ -8,34 +8,53 @@ class EmployeesModel {
     // LOGIN
     login = async ({username, password, id_branch}) => {
         const _password = md5(password+"GNOLUHP_29112021");
-        let sql = `SELECT * FROM ${this.tableAccount} 
-        INNER JOIN employees ON accounts.id_employee = employees.employees_id 
-        WHERE accounts.user_name = '${username}'
-         AND accounts.password = '${_password}' 
-         AND employees.id_branch = ${id_branch}
-         AND accounts.account_status = 'activity'`;
-        return await query(sql);
+        try{
+            let sql = `SELECT * FROM ${this.tableAccount} 
+            INNER JOIN employees ON accounts.id_employee = employees.employees_id 
+            WHERE accounts.user_name = '${username}'
+             AND accounts.password = '${_password}' 
+             AND employees.id_branch = ${id_branch}
+             AND accounts.account_status = 'activity'`;
+            return await query(sql);
+        }catch(e){
+            return null
+        }
+       
     }
 
     // GET LIST ACCOUNT
     listAccount = async () => {
-        let sql = `SELECT * FROM ${this.tableAccount} INNER JOIN  ${this.tableEmployees} ON ${this.tableAccount}.id_employee = ${this.tableEmployees}.employees_id;`;
-        return await query(sql);
+        try{
+            let sql = `SELECT * FROM ${this.tableAccount} INNER JOIN  ${this.tableEmployees} ON ${this.tableAccount}.id_employee = ${this.tableEmployees}.employees_id;`;
+            return await query(sql);
+        }catch{
+            return [];
+        }
     }
 
     // CREATE ACCOUNT
     
     CreateAccount = async ({ id_employee, user_name, password}) => {
         const _password = md5(password+"GNOLUHP_29112021");
-        let sql = `INSERT INTO ${this.tableAccount}(id_employee, user_name, password, account_status) VALUES ('${id_employee}','${user_name}','${_password}','activity')`;
-        return await query(sql);
+        try{
+            let sql = `INSERT INTO ${this.tableAccount}(id_employee, user_name, password, account_status) VALUES ('${id_employee}','${user_name}','${_password}','activity')`;
+            return await query(sql);
+        }catch(e){
+            return null;
+        }
+        
     }
 
     // GET ACCOUNT BY ID
 
     AccountByID = async (id) => {
-        let sql = `SELECT * FROM ${this.tableAccount} INNER JOIN  ${this.tableEmployees} ON ${this.tableAccount}.id_employee = ${this.tableEmployees}.employees_id WHERE ${this.tableAccount}.account_id = ${id};`;
-        return await query(sql);
+        try{
+            let sql = `SELECT * FROM ${this.tableAccount} INNER JOIN  ${this.tableEmployees} ON ${this.tableAccount}.id_employee = ${this.tableEmployees}.employees_id WHERE ${this.tableAccount}.account_id = ${id};`;
+            return await query(sql);
+        }catch(e){
+            return null;
+        }
+       
     }
 
     // CLOCKED - UN CLOCK ACCOUNT BY ID
