@@ -61,14 +61,14 @@ class EmployeesModel {
     ClockedAccountByID = async ({id}) => {
         let sql1 = `SELECT * FROM ${this.tableAccount} WHERE ${this.tableAccount}.account_id = ${id}`;
         let data = await query(sql1);
-        if(data[0].account_status.toString() == "clocked"){
+        if(data[0].account_status.toString() == "closed"){
             let sql = `UPDATE ${this.tableAccount} SET account_status='activity' WHERE  ${this.tableAccount}.account_id = ${id}`;
         await query(sql);
-        return "UnClock";
+        return "UnClose";
         }
-        let sql = `UPDATE ${this.tableAccount} SET account_status='clocked' WHERE  ${this.tableAccount}.account_id = ${id}`;
+        let sql = `UPDATE ${this.tableAccount} SET account_status='closed' WHERE  ${this.tableAccount}.account_id = ${id}`;
         await query(sql);
-        return "Clocked";
+        return "Closed";
     }
 
     // UPDATE ACCOUNT
@@ -108,14 +108,14 @@ class EmployeesModel {
     ClockedEmployeesByID = async ({id}) => {
         let sql1 = `SELECT * FROM ${this.tableEmployees} WHERE ${this.tableEmployees}.employees_id = ${id}`;
         let data = await query(sql1);
-        if(data[0].employees_status.toString() == "clocked"){
+        if(data[0].employees_status.toString() == "closed"){
             let sql = `UPDATE ${this.tableEmployees} SET employees_status='activity' WHERE  ${this.tableEmployees}.employees_id = ${id}`;
         await query(sql);
-        return "UnClock";
+        return "UnClose";
         }
-        let sql = `UPDATE ${this.tableEmployees} SET employees_status='clocked' WHERE  ${this.tableEmployees}.employees_id = ${id}`;
+        let sql = `UPDATE ${this.tableEmployees} SET employees_status='closed' WHERE  ${this.tableEmployees}.employees_id = ${id}`;
         await query(sql);
-        return "Clocked";
+        return "Closed";
     }
 
     // INSERT EMPLOYEES 
